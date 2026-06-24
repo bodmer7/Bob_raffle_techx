@@ -1,0 +1,22 @@
+<!-- @dsCard group="Brand" viewport="700x220" name="Sticker Gallery — IBM Bob" subtitle="The collectible roster across all five tiers" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body{padding:18px 20px;margin:0}
+  .grid{display:flex;gap:12px;flex-wrap:wrap}
+  .t{width:120px}
+  .frame{position:relative;border-radius:var(--r-md);padding:2px;background:linear-gradient(180deg,var(--rar-core),var(--rar-deep));box-shadow:0 0 0 1px color-mix(in srgb,var(--rar-core) 50%,transparent),0 0 20px -6px var(--rar-glow)}
+  .inner{border-radius:calc(var(--r-md) - 2px);background:radial-gradient(120% 80% at 50% 10%,color-mix(in srgb,var(--rar-core) 26%,var(--ink-850)),var(--ink-900) 72%);aspect-ratio:1/1;display:grid;place-items:center;overflow:hidden}
+  .inner img{width:92%;height:92%;object-fit:contain}
+  .cap{font-family:var(--font-display);font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--rar-bright);margin-top:7px;text-align:center}
+</style>
+</head><body>
+<div class="grid">
+  <div class="t" data-rarity="standard"><div class="frame"><div class="inner"><img class="sticker-art" src="../assets/stickers/code-with-bob.png"/></div></div><div class="cap">Mil-Spec</div></div>
+  <div class="t" data-rarity="rare"><div class="frame"><div class="inner"><img class="sticker-art" src="../assets/stickers/ai-powered.png"/></div></div><div class="cap">Restricted</div></div>
+  <div class="t" data-rarity="epic"><div class="frame"><div class="inner"><img class="sticker-art" src="../assets/stickers/quantum-coder.png"/></div></div><div class="cap">Classified</div></div>
+  <div class="t" data-rarity="legendary"><div class="frame"><div class="inner"><img class="sticker-art" src="../assets/stickers/hotfix-hero.png"/></div></div><div class="cap">Covert</div></div>
+  <div class="t" data-rarity="exotic"><div class="frame"><div class="inner"><img class="sticker-art" src="../assets/stickers/mvp-programmer.png"/></div></div><div class="cap">Bob Legendary</div></div>
+</div>
+</body></html>

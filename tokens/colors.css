@@ -1,0 +1,110 @@
+/* ============================================================
+   IBM BOB CAPSULE — COLOR TOKENS
+   Dark, premium CS:GO-style gaming UI. IBM blue accent.
+   ============================================================ */
+
+:root {
+  /* ---------- Brand ---------- */
+  --ibm-blue:        #0f62fe;   /* IBM primary — the one true accent */
+  --ibm-blue-hover:  #2f7bff;
+  --ibm-blue-press:  #0a4fd1;
+  --ibm-blue-soft:   #0f62fe1f; /* 12% wash for fills */
+  --ibm-blue-glow:   #0f62fe;   /* used in box-shadow glows */
+  --code-cyan:       #54c8ff;   /* the </> emblem highlight */
+
+  /* ---------- Raw neutrals (dark base) ---------- */
+  --black:     #04060b;
+  --ink-900:   #07090f;  /* app background, deepest */
+  --ink-850:   #0a0d15;
+  --ink-800:   #0d111b;  /* page panels */
+  --ink-700:   #11151f;  /* card surface */
+  --ink-600:   #161b28;  /* raised surface */
+  --ink-500:   #1d2434;  /* hover surface */
+  --ink-400:   #2a3346;  /* strong border / divider */
+  --ink-300:   #3b465c;
+  --ink-200:   #64718c;  /* muted text */
+  --ink-100:   #9aa6bd;  /* secondary text */
+  --ink-050:   #ccd4e3;  /* primary-ish */
+  --white:     #f4f7ff;
+
+  /* ---------- Semantic surfaces ---------- */
+  --bg-app:          var(--ink-900);
+  --bg-panel:        var(--ink-800);
+  --surface-card:    var(--ink-700);
+  --surface-raised:  var(--ink-600);
+  --surface-hover:   var(--ink-500);
+  --surface-inset:   var(--ink-850);
+
+  /* ---------- Semantic text ---------- */
+  --text-strong:     var(--white);
+  --text-body:       var(--ink-050);
+  --text-muted:      var(--ink-100);
+  --text-faint:      var(--ink-200);
+  --text-on-accent:  #ffffff;
+
+  /* ---------- Borders & lines ---------- */
+  --border-hair:     rgba(255, 255, 255, 0.07);
+  --border-soft:     rgba(255, 255, 255, 0.11);
+  --border-strong:   rgba(255, 255, 255, 0.18);
+  --border-accent:   var(--ibm-blue);
+
+  /* ---------- Feedback ---------- */
+  --success:   #34d17f;
+  --warning:   #ffb22e;
+  --danger:    #ff4d4d;
+  --info:      var(--code-cyan);
+
+  /* ============================================================
+     RARITY SYSTEM  —  blue → purple → pink → red → gold
+     Each tier ships: -core (the brand color),
+     -bright (label/edge), -deep (gradient floor),
+     -glow (the bloom around a pull).
+     ============================================================ */
+
+  /* Tier 1 — STANDARD (blue) */
+  --rar-standard-core:   #4b69ff;
+  --rar-standard-bright: #7e95ff;
+  --rar-standard-deep:   #1b2a6b;
+  --rar-standard-glow:   #4b69ff;
+
+  /* Tier 2 — RARE (purple / lila) */
+  --rar-rare-core:   #8847ff;
+  --rar-rare-bright: #b48bff;
+  --rar-rare-deep:   #341266;
+  --rar-rare-glow:   #8847ff;
+
+  /* Tier 3 — EPIC (pink) */
+  --rar-epic-core:   #d32ce6;
+  --rar-epic-bright: #f06bff;
+  --rar-epic-deep:   #5a0f63;
+  --rar-epic-glow:   #d32ce6;
+
+  /* Tier 4 — LEGENDARY (red) */
+  --rar-legendary-core:   #eb4b4b;
+  --rar-legendary-bright: #ff7b6b;
+  --rar-legendary-deep:   #631414;
+  --rar-legendary-glow:   #ff3b3b;
+
+  /* Tier 5 — EXOTIC (gold) */
+  --rar-exotic-core:   #f5b32d;
+  --rar-exotic-bright: #ffd86b;
+  --rar-exotic-deep:   #6b4a06;
+  --rar-exotic-glow:   #ffc73d;
+
+  /* Special finishes (overlays, not tiers) */
+  --finish-holo:  linear-gradient(115deg,#ff5b9e 0%,#ffd86b 22%,#5bffc6 45%,#54c8ff 65%,#b48bff 85%,#ff5b9e 100%); /* @kind other */
+  --finish-foil:  linear-gradient(150deg,#fff4c2 0%,#f5b32d 40%,#a9760a 60%,#ffe79e 100%); /* @kind other */
+  --finish-coin:  linear-gradient(150deg,#e9eef6 0%,#9fb0c8 45%,#5d6b85 60%,#dbe3f0 100%); /* @kind other */
+
+  /* ---------- Effects ---------- */
+  --scan-line:   rgba(255,255,255,0.025);
+  --grid-line:   rgba(120,150,255,0.05);
+}
+
+/* Convenience: a [data-rarity] scope exposes generic --rar-* aliases
+   so components can read one set of vars regardless of tier. */
+[data-rarity="standard"]  { --rar-core: var(--rar-standard-core);  --rar-bright: var(--rar-standard-bright);  --rar-deep: var(--rar-standard-deep);  --rar-glow: var(--rar-standard-glow); }
+[data-rarity="rare"]      { --rar-core: var(--rar-rare-core);      --rar-bright: var(--rar-rare-bright);      --rar-deep: var(--rar-rare-deep);      --rar-glow: var(--rar-rare-glow); }
+[data-rarity="epic"]      { --rar-core: var(--rar-epic-core);      --rar-bright: var(--rar-epic-bright);      --rar-deep: var(--rar-epic-deep);      --rar-glow: var(--rar-epic-glow); }
+[data-rarity="legendary"] { --rar-core: var(--rar-legendary-core); --rar-bright: var(--rar-legendary-bright); --rar-deep: var(--rar-legendary-deep); --rar-glow: var(--rar-legendary-glow); }
+[data-rarity="exotic"]    { --rar-core: var(--rar-exotic-core);    --rar-bright: var(--rar-exotic-bright);    --rar-deep: var(--rar-exotic-deep);    --rar-glow: var(--rar-exotic-glow); }

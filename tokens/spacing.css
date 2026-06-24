@@ -1,0 +1,68 @@
+/* ============================================================
+   IBM BOB CAPSULE — SPACING, RADII, SHADOWS, GLOWS, MOTION
+   ============================================================ */
+
+:root {
+  /* ---------- Spacing scale (4px base) ---------- */
+  --sp-0:   0; /* @kind spacing */
+  --sp-1:   4px;
+  --sp-2:   8px;
+  --sp-3:   12px;
+  --sp-4:   16px;
+  --sp-5:   20px;
+  --sp-6:   24px;
+  --sp-8:   32px;
+  --sp-10:  40px;
+  --sp-12:  48px;
+  --sp-16:  64px;
+  --sp-20:  80px;
+
+  /* ---------- Radii ---------- */
+  --r-xs:    4px;
+  --r-sm:    7px;
+  --r-md:    10px;
+  --r-lg:    14px;
+  --r-xl:    20px;
+  --r-pill:  999px;
+  /* Capsule + sticker frames favour a clipped, "cut-corner" gaming look.
+     Use this clip-path on key panels for the CS-style angled corner. */
+  --clip-cut: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px)); /* @kind other */
+
+  /* ---------- Elevation (dark UI: shadows are deep + tight) ---------- */
+  --sh-1:  0 1px 2px rgba(0,0,0,0.5);
+  --sh-2:  0 4px 14px rgba(0,0,0,0.5);
+  --sh-3:  0 12px 34px rgba(0,0,0,0.55);
+  --sh-4:  0 24px 64px rgba(0,0,0,0.6);
+  --inset-top: inset 0 1px 0 rgba(255,255,255,0.06);   /* top rim light */
+  --inset-line: inset 0 0 0 1px var(--border-hair);
+
+  /* ---------- Rarity glows (read with [data-rarity] scope) ---------- */
+  --glow-sm:  0 0 0 1px color-mix(in srgb, var(--rar-core, var(--ibm-blue)) 55%, transparent),
+              0 0 16px -2px color-mix(in srgb, var(--rar-glow, var(--ibm-blue)) 70%, transparent);
+  --glow-md:  0 0 0 1px color-mix(in srgb, var(--rar-core, var(--ibm-blue)) 70%, transparent),
+              0 0 28px -4px color-mix(in srgb, var(--rar-glow, var(--ibm-blue)) 85%, transparent),
+              0 8px 30px rgba(0,0,0,0.5);
+  --glow-lg:  0 0 0 1.5px var(--rar-core, var(--ibm-blue)),
+              0 0 60px -6px color-mix(in srgb, var(--rar-glow, var(--ibm-blue)) 90%, transparent),
+              0 0 120px -20px var(--rar-glow, var(--ibm-blue));
+
+  /* IBM-blue focus ring for interactive elements */
+  --focus-ring: 0 0 0 2px var(--bg-app), 0 0 0 4px var(--ibm-blue);
+
+  /* ---------- Motion ---------- */
+  --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);     /* @kind other */
+  --ease-in:    cubic-bezier(0.5, 0, 0.75, 0); /* @kind other */
+  --ease-snap:  cubic-bezier(0.34, 1.56, 0.64, 1); /* @kind other */
+  --ease-reel:  cubic-bezier(0.12, 0.8, 0.06, 1);  /* @kind other */
+  --dur-fast:   120ms; /* @kind other */
+  --dur-base:   220ms; /* @kind other */
+  --dur-slow:   420ms; /* @kind other */
+  --dur-reel:   6200ms;  /* @kind other */
+
+  /* ---------- Z layers ---------- */
+  --z-base:   1; /* @kind other */
+  --z-sticky: 50; /* @kind other */
+  --z-overlay:100; /* @kind other */
+  --z-modal:  200; /* @kind other */
+  --z-toast:  300; /* @kind other */
+}

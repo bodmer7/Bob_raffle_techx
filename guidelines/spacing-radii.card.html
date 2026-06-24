@@ -1,0 +1,18 @@
+<!-- @dsCard group="Spacing" viewport="700x180" name="Radii & Cut-Corner" subtitle="Rounding scale + the CS-style angled panel" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body{padding:24px;margin:0}.row{display:flex;gap:18px;align-items:flex-end;flex-wrap:wrap}
+  .b{width:96px;height:78px;background:var(--surface-raised);border:1px solid var(--border-soft);display:flex;align-items:flex-end;justify-content:center;padding-bottom:8px}
+  .lab{font-family:var(--font-mono);font-size:10px;color:var(--text-faint)}
+</style>
+</head><body>
+<div class="row">
+  <div class="b" style="border-radius:var(--r-sm)"><span class="lab">sm·7</span></div>
+  <div class="b" style="border-radius:var(--r-md)"><span class="lab">md·10</span></div>
+  <div class="b" style="border-radius:var(--r-lg)"><span class="lab">lg·14</span></div>
+  <div class="b" style="border-radius:var(--r-xl)"><span class="lab">xl·20</span></div>
+  <div class="b" style="border-radius:0;clip-path:var(--clip-cut);background:linear-gradient(180deg,var(--ibm-blue),var(--ibm-blue-press))"><span class="lab" style="color:#dbe7ff">cut-corner</span></div>
+</div>
+</body></html>

@@ -1,0 +1,90 @@
+/* ============================================================
+   IBM BOB CAPSULE — TYPOGRAPHY TOKENS
+   Display: Saira Condensed (esport headers, rarity labels)
+   UI/body: IBM Plex Sans (IBM heritage)
+   Mono:    IBM Plex Mono (counts, prices, the </> motif)
+   ============================================================ */
+
+:root {
+  /* ---------- Families ---------- */
+  --font-display: "Saira Condensed", "Arial Narrow", sans-serif;
+  --font-ui:      "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  --font-mono:    "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  /* ---------- Weights ---------- */
+  --w-regular:   400; /* @kind font */
+  --w-medium:    500; /* @kind font */
+  --w-semibold:  600; /* @kind font */
+  --w-bold:      700; /* @kind font */
+  --w-black:     800; /* @kind font */
+
+  /* ---------- Display scale (condensed, tight) ---------- */
+  --fs-hero:     clamp(48px, 7vw, 96px);  /* @kind font */
+  --fs-display:  clamp(34px, 4.5vw, 56px);/* @kind font */
+  --fs-title:    28px;                    /* @kind font */
+  --fs-subtitle: 21px; /* @kind font */
+
+  /* ---------- UI / body scale ---------- */
+  --fs-lg:       18px; /* @kind font */
+  --fs-base:     15px; /* @kind font */
+  --fs-sm:       13px; /* @kind font */
+  --fs-xs:       11px; /* @kind font */
+  --fs-2xs:      10px;   /* @kind font */
+
+  /* ---------- Line heights ---------- */
+  --lh-tight:    0.92; /* @kind font */
+  --lh-snug:     1.1; /* @kind font */
+  --lh-normal:   1.45; /* @kind font */
+
+  /* ---------- Tracking ---------- */
+  --ls-display:  0.005em; /* @kind font */
+  --ls-label:    0.14em;   /* @kind font */
+  --ls-wide:     0.22em;   /* @kind font */
+  --ls-mono:     0.02em; /* @kind font */
+}
+
+/* ---------- Helper classes ---------- */
+.t-hero {
+  font-family: var(--font-display);
+  font-weight: var(--w-black);
+  font-size: var(--fs-hero);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-display);
+  text-transform: uppercase;
+  font-style: italic;
+}
+.t-display {
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  font-size: var(--fs-display);
+  line-height: var(--lh-snug);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-display);
+}
+.t-title {
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  font-size: var(--fs-title);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: var(--lh-snug);
+}
+.t-eyebrow {
+  font-family: var(--font-ui);
+  font-weight: var(--w-semibold);
+  font-size: var(--fs-2xs);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-label);
+}
+.t-body {
+  font-family: var(--font-ui);
+  font-weight: var(--w-regular);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+}
+.t-mono {
+  font-family: var(--font-mono);
+  font-weight: var(--w-medium);
+  letter-spacing: var(--ls-mono);
+  font-variant-numeric: tabular-nums;
+}

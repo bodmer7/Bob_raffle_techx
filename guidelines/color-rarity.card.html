@@ -1,0 +1,21 @@
+<!-- @dsCard group="Colors" viewport="700x210" name="Rarity Ladder" subtitle="blue → purple → pink → red → gold, with glow" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body{padding:24px;margin:0}
+  .sw{display:flex;gap:16px;flex-wrap:wrap}
+  .t{width:118px}
+  .chip{height:88px;border-radius:var(--r-md);background:linear-gradient(180deg,var(--rar-core),var(--rar-deep));box-shadow:0 0 0 1px var(--rar-core),0 0 26px -6px var(--rar-glow)}
+  .name{font-family:var(--font-display);font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.1em;color:var(--rar-bright);margin-top:10px}
+  .hex{font-family:var(--font-mono);font-size:11px;color:var(--text-faint);margin-top:2px}
+</style>
+</head><body>
+<div class="sw">
+  <div class="t" data-rarity="standard"><div class="chip"></div><div class="name">Standard</div><div class="hex">#4b69ff</div></div>
+  <div class="t" data-rarity="rare"><div class="chip"></div><div class="name">Rare</div><div class="hex">#8847ff</div></div>
+  <div class="t" data-rarity="epic"><div class="chip"></div><div class="name">Epic</div><div class="hex">#d32ce6</div></div>
+  <div class="t" data-rarity="legendary"><div class="chip"></div><div class="name">Legendary</div><div class="hex">#eb4b4b</div></div>
+  <div class="t" data-rarity="exotic"><div class="chip"></div><div class="name">Exotic</div><div class="hex">#f5b32d</div></div>
+</div>
+</body></html>

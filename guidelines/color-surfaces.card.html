@@ -1,0 +1,20 @@
+<!-- @dsCard group="Colors" viewport="700x190" name="Surfaces — Dark Ink Scale" subtitle="App → panel → card → raised → hover" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body{padding:22px 24px;margin:0}
+  .sw{display:flex;gap:10px;flex-wrap:wrap}
+  .chip{width:120px;height:104px;border-radius:var(--r-md);display:flex;flex-direction:column;justify-content:flex-end;padding:9px;border:1px solid var(--border-hair)}
+  .name{font-family:var(--font-ui);font-weight:600;font-size:11px;color:var(--text-body)}
+  .hex{font-family:var(--font-mono);font-size:10px;color:var(--text-faint)}
+</style>
+</head><body>
+<div class="sw">
+  <div class="chip" style="background:var(--bg-app)"><span class="name">App</span><span class="hex">--bg-app</span></div>
+  <div class="chip" style="background:var(--bg-panel)"><span class="name">Panel</span><span class="hex">--bg-panel</span></div>
+  <div class="chip" style="background:var(--surface-card)"><span class="name">Card</span><span class="hex">--surface-card</span></div>
+  <div class="chip" style="background:var(--surface-raised)"><span class="name">Raised</span><span class="hex">--surface-raised</span></div>
+  <div class="chip" style="background:var(--surface-hover)"><span class="name">Hover</span><span class="hex">--surface-hover</span></div>
+</div>
+</body></html>

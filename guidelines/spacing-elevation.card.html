@@ -1,0 +1,19 @@
+<!-- @dsCard group="Spacing" viewport="700x180" name="Elevation & Rarity Glow" subtitle="Deep shadows + the rarity bloom system" -->
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body{padding:28px 24px;margin:0}.row{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+  .b{width:104px;height:74px;border-radius:var(--r-md);background:var(--surface-card);display:flex;align-items:flex-end;justify-content:center;padding-bottom:8px}
+  .lab{font-family:var(--font-mono);font-size:10px;color:var(--text-faint)}
+  .g{width:104px;height:74px;border-radius:var(--r-md);background:linear-gradient(180deg,var(--rar-core),var(--rar-deep))}
+</style>
+</head><body>
+<div class="row">
+  <div class="b" style="box-shadow:var(--sh-1)"><span class="lab">sh-1</span></div>
+  <div class="b" style="box-shadow:var(--sh-2)"><span class="lab">sh-2</span></div>
+  <div class="b" style="box-shadow:var(--sh-3)"><span class="lab">sh-3</span></div>
+  <div data-rarity="legendary" style="display:flex;flex-direction:column;align-items:center;gap:8px"><div class="g" style="box-shadow:var(--glow-md)"></div><span class="lab">glow-md</span></div>
+  <div data-rarity="exotic" style="display:flex;flex-direction:column;align-items:center;gap:8px"><div class="g" style="box-shadow:var(--glow-lg)"></div><span class="lab">glow-lg</span></div>
+</div>
+</body></html>
